@@ -27,9 +27,9 @@ For example, in the "main" project app `urls.py`:
 
 You can change the `default` navbar to another navbar by setting `settings.DEFAULT_NAVBAR` to the name of your custom navbar. You will need to declare and register your custom navbar manually. See `edc_navbar.navbars`. 
 
-A navbar is defined and registered to the site global in the `navbars.py` module of each app that needs a navbar.
-
 ### Declaring and registering a navbar
+
+A navbar is defined and registered to the site global in the `navbars.py` module of each app that needs a navbar.
 
 An example `navbars.py`:
 
