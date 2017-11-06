@@ -4,9 +4,7 @@ Simple Navbar class for edc
 
 Include `edc_navbar` in `INSTALLED_APPS`.
 
-Navbars are declared in your apps `navbars.py` and will be autodiscovered by `edc_navbar`.
-
-Navbars are in the site global `site_navbars` from `edc_navbar`
+Navbars are declared in your apps `navbars.py` and will be autodiscovered by `edc_navbar` and stored in the  site global `site_navbars`.
 
 An example `navbars.py`:
 
@@ -34,3 +32,14 @@ An example `navbars.py`:
     # register the navbar to the site
     site_navbars.register(pharmacy_dashboard)
  
+ Add `NavbarViewMixin` to your view and indicate the navbar by name. The navbar will be rendered to string
+ and added to the context.
+ 
+    ...
+    from edc_navbar import NavbarViewMixin
+
+    class HomeView(EdcBaseViewMixin, NavbarViewMixin, AppConfigViewMixin, TemplateView):
+
+        navbar_name = 'pharmacy_dashboard'
+        navbar_selected_item = 'prescribe'
+
