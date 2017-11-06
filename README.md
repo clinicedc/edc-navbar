@@ -17,17 +17,19 @@ An example `navbars.py`:
     
     # add items to the navbar
     pharmacy_dashboard.append_item(
-        NavbarItem(name='prescribe',
-                   title='Prescribe',
-                   label='prescribe',
-                   url_name=f'{url_namespace}:prescribe_listboard_url'))
+        NavbarItem(
+            name='prescribe',
+            title='Prescribe',
+            label='prescribe',
+            url_name=f'{url_namespace}:prescribe_listboard_url'))
     
     pharmacy_dashboard.append_item(
-        NavbarItem(name='dispense',
-                   title='Dispense',
-                   label='dispense',
-                   icon='medicines.png',
-                   url_name=f'{url_namespace}:dispense_listboard_url'))
+        NavbarItem(
+            name='dispense',
+            title='Dispense',
+            label='dispense',
+            icon='medicines.png',
+            url_name=f'{url_namespace}:dispense_listboard_url'))
     
     # register the navbar to the site
     site_navbars.register(pharmacy_dashboard)
