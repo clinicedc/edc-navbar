@@ -67,7 +67,7 @@ Next, add `NavbarViewMixin` to your views and set the navbar by name. The navbar
     ...
     from edc_navbar import NavbarViewMixin
 
-    class HomeView(EdcBaseViewMixin, NavbarViewMixin, AppConfigViewMixin, TemplateView):
+    class HomeView(EdcBaseViewMixin, NavbarViewMixin, TemplateView):
 
         navbar_name = 'pharmacy_dashboard'
         navbar_selected_item = 'prescribe'
