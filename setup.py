@@ -16,7 +16,7 @@ setup(
     author_email='ew2789@gmail.com',
     packages=find_packages(),
     include_package_data=True,
-    url='http://github.com/botswana-harvard/edc-navbar',
+    url='http://github.com/clinicedc/edc-navbar',
     license='GPL license, see LICENSE',
     description='Simple navbar classes for edc',
     long_description=README,
