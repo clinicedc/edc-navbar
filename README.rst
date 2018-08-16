@@ -91,6 +91,61 @@ Rendering Navbar items
 The default template for ``NavbarItem`` is ``navbar_item.html``. You can declare a custom template on the ``NavbarItem``.
 
 
+Permissions per NavbarItem
+==========================
+
+Each NavbarItem can declare a Django permissions ``codename``. The codename will be associated with model ``edc_navbar.navbar``.
+
+For example:
+
+.. code-block:: python
+
+    from edc_navbar import NavbarItem, site_navbars, Navbar
+    
+    url_namespace = 'edc_pharmacy_dashboard'
+    
+    # instantiate a Navbar
+    pharmacy_dashboard = Navbar(name='pharmacy_dashboard')
+    
+    # add items to the navbar
+    pharmacy_dashboard.append_item(
+        NavbarItem(
+            name='prescribe',
+            title='Prescribe',
+            label='prescribe',
+            glyphicon='glyphicon-edit',
+            permissions_codename='nav_pharmacy_prescribe',
+            url_name=f'{url_namespace}:prescribe_listboard_url'))
+    
+    pharmacy_dashboard.append_item(
+        NavbarItem(
+            name='dispense',
+            title='Dispense',
+            label='dispense',
+            glyphicon='glyphicon-share',
+            permissions_codename='nav_pharmacy_dispense',
+            url_name=f'{url_namespace}:dispense_listboard_url'))
+    
+    # register the navbar to the site
+    site_navbars.register(pharmacy_dashboard)
+
+From the above, you can reference ``edc_navbar.nav_pharmacy_prescribe`` and ``edc_navbar.nav_pharmacy_dispense`` in your code.
+
+.. code-block:: python
+
+    {% if perms.edc_navbar.nav_pharmacy_dispense %}
+        href="some_url"
+    {% else%}
+        disabled
+    {% endif %}
+
+See also:
+
+* https://github.com/clinicedc/edc-permissions
+* https://docs.djangoproject.com/en/2.1/topics/auth
+
+
+
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-navbar.svg
     :target: https://pypi.python.org/pypi/edc-navbar
     
@@ -99,4 +154,5 @@ The default template for ``NavbarItem`` is ``navbar_item.html``. You can declare
     
 .. |coverage| image:: https://coveralls.io/repos/github/clinicedc/edc-navbar/badge.svg?branch=develop
     :target: https://coveralls.io/github/clinicedc/edc-navbar?branch=develop
+
 
