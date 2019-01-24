@@ -149,10 +149,8 @@ See also:
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-navbar.svg
     :target: https://pypi.python.org/pypi/edc-navbar
     
-.. |travis| image:: https://travis-ci.org/clinicedc/edc-navbar.svg?branch=develop
-    :target: https://travis-ci.org/clinicedc/edc-navbar
+.. |travis| image:: https://travis-ci.com/clinicedc/edc-navbar.svg?branch=develop
+    :target: https://travis-ci.com/clinicedc/edc-navbar
     
 .. |coverage| image:: https://coveralls.io/repos/github/clinicedc/edc-navbar/badge.svg?branch=develop
     :target: https://coveralls.io/github/clinicedc/edc-navbar?branch=develop
-
-
