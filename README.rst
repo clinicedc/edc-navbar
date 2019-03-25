@@ -34,6 +34,28 @@ For example, in the "main" project app ``urls.py``:
 
 You can change the ``default`` navbar to another navbar by setting ``settings.DEFAULT_NAVBAR`` to the name of your custom navbar. You will need to declare and register your custom navbar manually. See ``edc_navbar.navbars``. 
 
+
+The default template for ``NavbarItem`` is ``navbar_item.html``. You can declare a custom template on the ``NavbarItem``.
+
+
+Render the Navbar
+=================
+
+For example, in base.html:
+
+.. code-block:: python
+
+    {% load edc_dashboard_extras %}
+    
+    ...
+
+    {% edc_navbar %}    
+
+    ...
+
+The rendered html comes from ``edc_navbar.html``
+
+
 Declaring and registering a navbar
 ==================================
 
