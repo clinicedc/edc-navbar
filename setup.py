@@ -30,7 +30,7 @@ setup(
     long_description=README,
     zip_safe=False,
     keywords='edc navbar',
-    install_requires=["edc_dashboard"],
+    install_requires=["edc-dashboard", "edc-permissions"],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
