@@ -27,10 +27,16 @@ DEFAULT_SETTINGS = DefaultTestSettings(
         'django.contrib.sessions',
         'django.contrib.sites',
         'django.contrib.staticfiles',
+        "django_crypto_fields.apps.AppConfig",
+        "edc_registration.apps.AppConfig",
+        'edc_action_item.apps.AppConfig',
+        'edc_notification.apps.AppConfig',
+        'edc_dashboard.apps.AppConfig',
         'edc_permissions.apps.AppConfig',
         'edc_navbar.apps.AppConfig',
     ],
     add_dashboard_middleware=True,
+    use_test_urls=True,
 ).settings
 
 
