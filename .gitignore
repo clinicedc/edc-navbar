@@ -1,5 +1,4 @@
-etc/*
-venv/*
+django_crytpo_fields
 
 # Swap
 [._]*.s[a-v][a-z]
