@@ -49,7 +49,7 @@ For example, in base.html:
     
     ...
 
-    {% edc_navbar %}    
+    {% show_edc_navbar %}    
 
     ...
 
