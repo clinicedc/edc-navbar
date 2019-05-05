@@ -1,4 +1,4 @@
-|pypi| |travis| |coverage|
+|pypi| |travis| |codecov| |downloads|
 
 edc_navbar
 ----------
@@ -49,7 +49,7 @@ For example, in base.html:
     
     ...
 
-    {% edc_navbar %}    
+    {% show_edc_navbar %}    
 
     ...
 
@@ -174,5 +174,9 @@ See also:
 .. |travis| image:: https://travis-ci.com/clinicedc/edc-navbar.svg?branch=develop
     :target: https://travis-ci.com/clinicedc/edc-navbar
     
-.. |coverage| image:: https://coveralls.io/repos/github/clinicedc/edc-navbar/badge.svg?branch=develop
-    :target: https://coveralls.io/github/clinicedc/edc-navbar?branch=develop
+.. |codecov| image:: https://codecov.io/gh/clinicedc/edc-navbar/branch/develop/graph/badge.svg
+  :target: https://codecov.io/gh/clinicedc/edc-navbar
+
+.. |downloads| image:: https://pepy.tech/badge/edc-navbar
+   :target: https://pepy.tech/project/edc-navbar
+
