@@ -34,6 +34,7 @@ DEFAULT_SETTINGS = DefaultTestSettings(
         'edc_notification.apps.AppConfig',
         'edc_dashboard.apps.AppConfig',
         'edc_permissions.apps.AppConfig',
+        'edc_sites.apps.AppConfig',
         'edc_navbar.apps.AppConfig',
     ],
     add_dashboard_middleware=True,
