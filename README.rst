@@ -163,7 +163,7 @@ From the above, you can reference ``edc_navbar.nav_pharmacy_prescribe`` and ``ed
 
 See also:
 
-* https://github.com/clinicedc/edc-permissions
+* https://github.com/clinicedc/edc-auth
 * https://docs.djangoproject.com/en/2.1/topics/auth
 
 
