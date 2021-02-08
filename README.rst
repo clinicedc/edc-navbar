@@ -1,4 +1,4 @@
-|pypi| |travis| |codecov| |downloads|
+|pypi| |actions| |codecov| |downloads|
 
 edc_navbar
 ----------
@@ -32,7 +32,7 @@ For example, in the "main" project app ``urls.py``:
         ...
         ]
 
-You can change the ``default`` navbar to another navbar by setting ``settings.DEFAULT_NAVBAR`` to the name of your custom navbar. You will need to declare and register your custom navbar manually. See ``edc_navbar.navbars``. 
+You can change the ``default`` navbar to another navbar by setting ``settings.DEFAULT_NAVBAR`` to the name of your custom navbar. You will need to declare and register your custom navbar manually. See ``edc_navbar.navbars``.
 
 
 The default template for ``NavbarItem`` is ``navbar_item.html``. You can declare a custom template on the ``NavbarItem``.
@@ -46,10 +46,10 @@ For example, in base.html:
 .. code-block:: python
 
     {% load edc_dashboard_extras %}
-    
+
     ...
 
-    {% show_edc_navbar %}    
+    {% show_edc_navbar %}
 
     ...
 
@@ -66,12 +66,12 @@ An example ``navbars.py``:
 .. code-block:: python
 
     from edc_navbar import NavbarItem, site_navbars, Navbar
-    
+
     url_namespace = 'edc_pharmacy_dashboard'
-    
+
     # instantiate a Navbar
     pharmacy_dashboard = Navbar(name='pharmacy_dashboard')
-    
+
     # add items to the navbar
     pharmacy_dashboard.append_item(
         NavbarItem(
@@ -80,7 +80,7 @@ An example ``navbars.py``:
             label='prescribe',
             glyphicon='glyphicon-edit',
             url_name=f'{url_namespace}:prescribe_listboard_url'))
-    
+
     pharmacy_dashboard.append_item(
         NavbarItem(
             name='dispense',
@@ -88,17 +88,17 @@ An example ``navbars.py``:
             label='dispense',
             glyphicon='glyphicon-share',
             url_name=f'{url_namespace}:dispense_listboard_url'))
-    
+
     # register the navbar to the site
     site_navbars.register(pharmacy_dashboard)
- 
+
 Accessing the navbar in your views
 ==================================
 
 Next, add ``NavbarViewMixin`` to your views and set the navbar by name. The navbar will be rendered to string and added to the view context.
- 
+
 .. code-block:: python
-    
+
     from edc_navbar import NavbarViewMixin
 
     class HomeView(EdcViewMixin, NavbarViewMixin, TemplateView):
@@ -123,12 +123,12 @@ For example:
 .. code-block:: python
 
     from edc_navbar import NavbarItem, site_navbars, Navbar
-    
+
     url_namespace = 'edc_pharmacy_dashboard'
-    
+
     # instantiate a Navbar
     pharmacy_dashboard = Navbar(name='pharmacy_dashboard')
-    
+
     # add items to the navbar
     pharmacy_dashboard.append_item(
         NavbarItem(
@@ -138,7 +138,7 @@ For example:
             glyphicon='glyphicon-edit',
             permissions_codename='nav_pharmacy_prescribe',
             url_name=f'{url_namespace}:prescribe_listboard_url'))
-    
+
     pharmacy_dashboard.append_item(
         NavbarItem(
             name='dispense',
@@ -147,7 +147,7 @@ For example:
             glyphicon='glyphicon-share',
             permissions_codename='nav_pharmacy_dispense',
             url_name=f'{url_namespace}:dispense_listboard_url'))
-    
+
     # register the navbar to the site
     site_navbars.register(pharmacy_dashboard)
 
@@ -170,10 +170,10 @@ See also:
 
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-navbar.svg
     :target: https://pypi.python.org/pypi/edc-navbar
-    
-.. |travis| image:: https://travis-ci.com/clinicedc/edc-navbar.svg?branch=develop
-    :target: https://travis-ci.com/clinicedc/edc-navbar
-    
+
+.. |actions| image:: https://github.com/clinicedc/edc-navbar/workflows/build/badge.svg?branch=develop
+  :target: https://github.com/clinicedc/edc-navbar/actions?query=workflow:build
+
 .. |codecov| image:: https://codecov.io/gh/clinicedc/edc-navbar/branch/develop/graph/badge.svg
   :target: https://codecov.io/gh/clinicedc/edc-navbar
 
