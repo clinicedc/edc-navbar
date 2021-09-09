@@ -24,6 +24,7 @@ DEFAULT_SETTINGS = DefaultTestSettings(
     EDC_PROTOCOL_STUDY_OPEN_DATETIME=arrow.utcnow().floor("hour") - relativedelta(years=2),
     EDC_PROTOCOL_STUDY_CLOSE_DATETIME=arrow.utcnow().ceil("hour") + relativedelta(years=2),
     EDC_NAVBAR_DEFAULT=app_name,
+    EDC_AUTH_CODENAMES_WARN_ONLY=True,
     INSTALLED_APPS=[
         "django.contrib.admin",
         "django.contrib.auth",
