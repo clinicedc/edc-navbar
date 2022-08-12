@@ -33,8 +33,6 @@ DEFAULT_SETTINGS = DefaultTestSettings(
         "django.contrib.messages",
         "django.contrib.staticfiles",
         "django.contrib.sites",
-        "django_celery_beat",
-        "django_celery_results",
         "django_crypto_fields.apps.AppConfig",
         "edc_action_item.apps.AppConfig",
         "edc_auth.apps.AppConfig",
