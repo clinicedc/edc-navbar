@@ -167,7 +167,6 @@ See also:
 * https://docs.djangoproject.com/en/2.1/topics/auth
 
 
-
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-navbar.svg
     :target: https://pypi.python.org/pypi/edc-navbar
 
