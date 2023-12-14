@@ -170,8 +170,8 @@ See also:
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-navbar.svg
     :target: https://pypi.python.org/pypi/edc-navbar
 
-.. |actions| image:: https://github.com/clinicedc/edc-navbar/workflows/build/badge.svg?branch=develop
-  :target: https://github.com/clinicedc/edc-navbar/actions?query=workflow:build
+.. |actions| image:: https://github.com/clinicedc/edc-navbar/actions/workflows/build.yml/badge.svg
+  :target: https://github.com/clinicedc/edc-navbar/actions/workflows/build.yml
 
 .. |codecov| image:: https://codecov.io/gh/clinicedc/edc-navbar/branch/develop/graph/badge.svg
   :target: https://codecov.io/gh/clinicedc/edc-navbar
