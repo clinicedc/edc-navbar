@@ -73,7 +73,7 @@ An example ``navbars.py``:
     pharmacy_dashboard = Navbar(name='pharmacy_dashboard')
 
     # add items to the navbar
-    pharmacy_dashboard.append_item(
+    pharmacy_dashboard.register(
         NavbarItem(
             name='prescribe',
             title='Prescribe',
@@ -81,7 +81,7 @@ An example ``navbars.py``:
             glyphicon='glyphicon-edit',
             url_name=f'{url_namespace}:prescribe_listboard_url'))
 
-    pharmacy_dashboard.append_item(
+    pharmacy_dashboard.register(
         NavbarItem(
             name='dispense',
             title='Dispense',
@@ -130,7 +130,7 @@ For example:
     pharmacy_dashboard = Navbar(name='pharmacy_dashboard')
 
     # add items to the navbar
-    pharmacy_dashboard.append_item(
+    pharmacy_dashboard.register(
         NavbarItem(
             name='prescribe',
             title='Prescribe',
@@ -139,7 +139,7 @@ For example:
             permissions_codename='nav_pharmacy_prescribe',
             url_name=f'{url_namespace}:prescribe_listboard_url'))
 
-    pharmacy_dashboard.append_item(
+    pharmacy_dashboard.register(
         NavbarItem(
             name='dispense',
             title='Dispense',
