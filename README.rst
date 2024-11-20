@@ -178,4 +178,3 @@ See also:
 
 .. |downloads| image:: https://pepy.tech/badge/edc-navbar
    :target: https://pepy.tech/project/edc-navbar
-
